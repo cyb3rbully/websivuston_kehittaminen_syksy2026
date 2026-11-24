@@ -5,112 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mun sivu</title>
-    <style>
-      h2 {
-        color: green;
-      }
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-        margin: 20px 0;
-      }
-      .grid-item {
-        background-color: lightgreen;
-        padding: 20px;
-        text-align: center;
-      }
-      .flex-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 20px 0;
-      }
-      .box {
-        background-color: lightblue;
-        padding: 20px;
-        text-align: center;
-      }
-      .responsive-box {
-        padding: 20px;
-        text-align: center;
-      }
-      @media (max-width: 600px) {
-        .responsive-box {
-          background-color: lightcoral;
-        }
-      }
-      @media (min-width: 601px) {
-        .responsive-box {
-          background-color: lightseagreen;
-        }
-      }
-    </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 style="color: brown">tervetuloa mun sivulle!</h1>
-    <h2>tuu kattoo</h2>
-    <p>justus on jonne ja tykkää pojista</p>
-    <img
-      src="./images/image.png"
-      alt="mun kuva"
-      width="500"
-      height="600"
-      class="filter-image"
-    />
-    <div class="content-box">
-      <h1>mitä mul on taskussa?:</h1>
-      <ol>
-        <li>viulu</li>
-        <li>lohi</li>
-        <li>sipuli</li>
-      </ol>
-    </div>
-    <h2>asioita mitä en pysty elää ilman:</h2>
-    <ul>
-      <li>viulu</li>
-      <li>lohi</li>
-      <li>sipuli</li>
-    </ul>
-    <h2>harrastukset</h2>
-    <ol class="pseudo-list">
-      <li>melonta</li>
-      <li>street fight</li>
-      <li>salakuvaaminen</li>
-      <li>hyrox</li>
-      <li>frisbee golf</li>
-    </ol>
-    <h2>lempi vapet</h2>
-    <ul>
-      <li>Leo hirmasto</li>
-      <li>maskin</li>
-      <li>elfbar</li>
-    </ul>
-    <a href="https://www.laurea.fi">Visit Laurea</a>
-    <table>
-      <tr>
-        <th>html kurssi</th>
-        <th>taloushallinto kurssi</th>
-      </tr>
-      <tr>
-        <td>6 tuntia</td>
-        <td>2 etätuntia</td>
-      </tr>
-      <tr>
-        <td>5 tuntia</td>
-        <td>2 etätuntia</td>
-      </tr>
-    </table>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" />
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" />
-      <input type="submit" value="Submit" />
-    </form>
-    <button class="transition-button">Hover me</button>
-    <div class="animation-box"></div>
-    <blockquote class="quote">kiitos käynnistä.</blockquote>
+    <header>
+      <h1 style="color: brown">tervetuloa mun sivulle!</h1>
+      <nav class="responsive-nav">
+        <button class="menu-toggle">☰ Menu</button>
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h2>tuu kattoo</h2>
+        <p>justus on jonne ja tykkää pojista</p>
+        <img
+          src="./images/image.png"
+          alt="mun kuva"
+          class="filter-image responsive-image"
+        />
+        <div class="content-box">
+          <h1>mitä mul on taskussa?:</h1>
+          <ol>
+            <li>viulu</li>
+            <li>lohi</li>
+            <li>sipuli</li>
+          </ol>
+        </div>
+        <h2>asioita mitä en pysty elää ilman:</h2>
+        <ul>
+          <li>viulu</li>
+          <li>lohi</li>
+          <li>sipuli</li>
+        </ul>
+      </section>
+      <section id="harrastukset">
+        <h2>harrastukset</h2>
+        <ol class="pseudo-list">
+          <li>melonta</li>
+          <li>street fight</li>
+          <li>salakuvaaminen</li>
+          <li>hyrox</li>
+          <li>frisbee golf</li>
+        </ol>
+        <h2>lempi vapet</h2>
+        <ul>
+          <li>Leo hirmasto</li>
+          <li>maskin</li>
+          <li>elfbar</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Grid Layout</h2>
+        <div class="grid-container">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+          <div class="grid-item">5</div>
+          <div class="grid-item">6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Flexbox Layout</h2>
+        <div class="flex-container">
+          <div class="box">Box 1</div>
+          <div class="box">Box 2</div>
+          <div class="box">Box 3</div>
+        </div>
+      </section>
+      <section>
+        <h2>Media Query</h2>
+        <div class="responsive-box">Resize the window to see the effect</div>
+      </section>
+      <section>
+        <h2>Responsive Layout</h2>
+        <div class="responsive-container">
+          <div class="column">Column 1</div>
+          <div class="column">Column 2</div>
+        </div>
+      </section>
+      <section>
+        <h2>Media Query Box</h2>
+        <div class="media-query-box">Resize the window to see the effect</div>
+      </section>
+      <a href="https://www.laurea.fi">Visit Laurea</a>
+      <table>
+        <tr>
+          <th>html kurssi</th>
+          <th>taloushallinto kurssi</th>
+        </tr>
+        <tr>
+          <td>6 tuntia</td>
+          <td>2 etätuntia</td>
+        </tr>
+        <tr>
+          <td>5 tuntia</td>
+          <td>2 etätuntia</td>
+        </tr>
+      </table>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <input type="submit" value="Submit" />
+      </form>
+      <button class="transition-button">Hover me</button>
+      <div class="animation-box"></div>
+    </main>
+    <footer id="contact">
+      <blockquote class="quote">kiitos käynnistä.</blockquote>
+      <p>Copyright 2025</p>
+    </footer>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navList = document.querySelector(".nav-list");
+
+      menuToggle.addEventListener("click", function () {
+        navList.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
